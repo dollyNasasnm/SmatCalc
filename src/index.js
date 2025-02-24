@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import StringCalculator from './components/StringCalculator';
 import reportWebVitals from './reportWebVitals';
+import './Calculator.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
