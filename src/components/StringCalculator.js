@@ -12,10 +12,19 @@ const StringCalculator = () => {
 //   };
 
 // Note: return same number for single number
+// const add = (numbers) => {
+//     if (numbers === "") return 0;
+//     return parseInt(numbers, 10);
+//   };
+
+// Note: return return the sum of multiple numbers
+
 const add = (numbers) => {
     if (numbers === "") return 0;
-    return parseInt(numbers, 10);
+    const numArray = numbers.split(",").map(Number);
+    return numArray.reduce((sum, num) => sum + num, 0);
   };
+  
 
   const handleChange = (event) => {
     setInputValue(event.target.value);

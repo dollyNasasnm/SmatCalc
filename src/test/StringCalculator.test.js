@@ -13,15 +13,26 @@ describe("StringCalculator", () => {
 //     expect(result).toHaveTextContent("Result: 0");
 //   });
 
-it("should return the same number for a single number", () => {
+// it("should return the same number for a single number", () => {
+//     render(<StringCalculator />);
+//     const input = screen.getByPlaceholderText("Enter numbers");
+//     fireEvent.change(input, { target: { value: "1" } });
+//     const button = screen.getByText("Calculate");
+//     fireEvent.click(button);
+//     const result = screen.getByTestId("result");
+//     expect(result).toHaveTextContent("Result: 1");
+//   });
+
+it("should return the sum of multiple numbers", () => {
     render(<StringCalculator />);
     const input = screen.getByPlaceholderText("Enter numbers");
-    fireEvent.change(input, { target: { value: "1" } });
+    fireEvent.change(input, { target: { value: "1,2,3" } });
     const button = screen.getByText("Calculate");
     fireEvent.click(button);
     const result = screen.getByTestId("result");
-    expect(result).toHaveTextContent("Result: 1");
+    expect(result).toHaveTextContent("Result: 6");
   });
+  
   
 
 });
