@@ -114,7 +114,7 @@ const StringCalculator = () => {
         </main>
         
         <footer className="footer">
-        <p>© 2025 Simple Calculator. All rights reserved.</p>
+        <p>© 2025 Smart Calculator. All rights reserved.</p>
         </footer>
         </div>
     );
