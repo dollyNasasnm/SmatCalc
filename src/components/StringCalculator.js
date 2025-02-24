@@ -5,9 +5,16 @@ const StringCalculator = () => {
   const [inputValue, setInputValue] = useState("");
   const [result, setResult] = useState(null);
 
-  const add = (numbers) => {
+  //Note: return 0 for an empty string
+//   const add = (numbers) => {
+//     if (numbers === "") return 0;
+//     return 0;
+//   };
+
+// Note: return same number for single number
+const add = (numbers) => {
     if (numbers === "") return 0;
-    return 0;
+    return parseInt(numbers, 10);
   };
 
   const handleChange = (event) => {
