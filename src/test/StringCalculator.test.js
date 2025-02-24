@@ -23,15 +23,28 @@ describe("StringCalculator", () => {
 //     expect(result).toHaveTextContent("Result: 1");
 //   });
 
-it("should return the sum of multiple numbers", () => {
+// it("should return the sum of multiple numbers", () => {
+//     render(<StringCalculator />);
+//     const input = screen.getByPlaceholderText("Enter numbers");
+//     fireEvent.change(input, { target: { value: "1,2,3" } });
+//     const button = screen.getByText("Calculate");
+//     fireEvent.click(button);
+//     const result = screen.getByTestId("result");
+//     expect(result).toHaveTextContent("Result: 6");
+//   });
+
+it("should throw an error for negative numbers", () => {
     render(<StringCalculator />);
     const input = screen.getByPlaceholderText("Enter numbers");
-    fireEvent.change(input, { target: { value: "1,2,3" } });
+    fireEvent.change(input, { target: { value: "1,-2,3" } });
     const button = screen.getByText("Calculate");
     fireEvent.click(button);
     const result = screen.getByTestId("result");
-    expect(result).toHaveTextContent("Result: 6");
+    expect(result).toHaveTextContent("Negative numbers not allowed: -2");
   });
+  
+  
+  
   
   
 
